@@ -15,3 +15,14 @@ describe("Books names test suit", () => {
     ]);
   });
 });
+describe("Books names test suit negative", () => {
+  it("Naming a workbook without sorting", () => {
+    expect(
+      sorting.sortByName([
+        "Гарри Поттер",
+        "Волшебник изумрудного города",
+        "Гарри Поттер",
+      ])
+    ).toEqual(["Волшебник изумрудного города", "Гарри Поттер", "Гарри Поттер"]);
+  });
+});
